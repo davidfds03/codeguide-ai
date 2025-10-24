@@ -8,5 +8,5 @@
     "dist": true
   },
   "typescript.tsc.autoDetect": "on",
-  "codeguide-ai.geminiApiKey": "AIzaSyBJ6-AQ4-NGQwoihNh9BFJ7IeeoxHwSGnk"
+  "codeguide-ai.geminiApiKey": ""
 }
