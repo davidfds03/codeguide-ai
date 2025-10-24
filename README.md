@@ -5,9 +5,6 @@
 ````markdown
 # 🧠 CodeGuide AI
 
-[![Visual Studio Marketplace](https://img.shields.io/badge/VSCODE-Extension-blue?logo=visualstudiocode)](https://marketplace.visualstudio.com/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?logo=node.js)](https://nodejs.org)
 
 > ✨ A VS Code extension that uses **Google Gemini AI** to explain your selected code directly inside VS Code.
 
