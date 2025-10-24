@@ -1,71 +1,162 @@
-# codeguide-ai README
-
-This is the README for your extension "codeguide-ai". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Absolutely 👍 Here’s a **professional, GitHub-ready `README.md`** for your VS Code extension **CodeGuide AI** — complete with badges, setup steps, and usage instructions.
 
 ---
 
-## Following extension guidelines
+````markdown
+# 🧠 CodeGuide AI
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+[![Visual Studio Marketplace](https://img.shields.io/badge/VSCODE-Extension-blue?logo=visualstudiocode)](https://marketplace.visualstudio.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?logo=node.js)](https://nodejs.org)
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+> ✨ A VS Code extension that uses **Google Gemini AI** to explain your selected code directly inside VS Code.
 
-## Working with Markdown
+---
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## 🚀 Features
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+✅ **Explain Selected Code** — Highlight any code, press `Ctrl+Shift+P`, run **"Explain Selected Code"**, and get an AI-powered explanation.  
+⚙️ **Configurable Gemini API Key** — Securely store your key in VS Code settings.  
+🧩 **Lightweight** — Built with TypeScript + esbuild for fast performance.  
+🧠 **Supports multiple languages** — Works with Python, Java, JavaScript, and more.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## 🧰 Installation
 
-**Enjoy!**
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/<your-username>/codeguide-ai.git
+   cd codeguide-ai
+````
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Build the extension:
+
+   ```bash
+   npm run compile
+   ```
+
+4. Launch in VS Code:
+
+   * Press **F5** to open an *Extension Development Host* window.
+   * The extension will auto-load.
+
+---
+
+## 🔑 Setup Gemini API Key
+
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Create a new **API Key**.
+3. Open VS Code → **Settings (`Ctrl+,`)**
+4. Search for: `codeguide-ai`
+5. Paste your key under:
+
+   ```
+   CodeGuide AI › Gemini API Key
+   ```
+
+Alternatively, add it directly to your settings JSON:
+
+```json
+{
+  "codeguide-ai.geminiApiKey": "YOUR_API_KEY_HERE"
+}
+```
+
+---
+
+## 💡 Usage
+
+1. Select any code snippet in the editor.
+2. Open **Command Palette** → search for:
+
+   ```
+   Explain Selected Code
+   ```
+3. The extension will generate an explanation using Gemini AI.
+
+---
+
+## ⚙️ Configuration
+
+| Setting                     | Description         | Default |
+| --------------------------- | ------------------- | ------- |
+| `codeguide-ai.geminiApiKey` | Your Gemini API Key | `""`    |
+
+---
+
+## 🧩 Development
+
+To modify or contribute:
+
+```bash
+git clone https://github.com/<your-username>/codeguide-ai.git
+cd codeguide-ai
+npm install
+npm run watch   # automatically rebuilds on file changes
+```
+
+Then press **F5** in VS Code to run in a sandbox.
+
+---
+
+## 🧠 API Models
+
+By default, the extension uses:
+
+```
+models/gemini-2.5-flash
+```
+
+If needed, update this in `src/extension.ts` for newer models.
+
+---
+
+## 🪄 Example Output
+
+> **User Code:**
+>
+> ```python
+> def factorial(n):
+>     return 1 if n <= 1 else n * factorial(n-1)
+> ```
+
+> **CodeGuide AI:**
+> “This function calculates the factorial of a number recursively.
+> It multiplies `n` by the factorial of `n-1` until `n` equals 1.”
+
+---
+
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — feel free to use and modify.
+
+---
+
+## ⭐ Contribute
+
+If you find this project helpful, please:
+
+* 🌟 Star the repo
+* 🐛 Report bugs via [Issues](https://github.com/<your-username>/codeguide-ai/issues)
+* 💡 Suggest new features!
+
+---
+
+> Made with ❤️ using [VS Code API](https://code.visualstudio.com/api) and [Google Gemini](https://aistudio.google.com).
+
+```
+
+---
+
+Would you like me to **customize the README** to include a **real screenshot** or **demo GIF** section (like “See it in action”)? That makes it look much more professional on GitHub.
+```
