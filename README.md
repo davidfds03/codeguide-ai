@@ -1,4 +1,4 @@
-Absolutely 👍 Here’s a **professional, GitHub-ready `README.md`** for your VS Code extension **CodeGuide AI** — complete with badges, setup steps, and usage instructions.
+
 
 ---
 
